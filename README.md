@@ -1,4 +1,4 @@
-# Camera module concept based on RK3588
+# Модуль камер для RK3588
 
 Rockchip RK3588 поддерживает подключение до 6 камер c MIPI CSI за счёт встроенного контроллера камер (Image Signal Processor, ISP) и возможности разделения дифференциальных пар (lane) отдельных блоков.
 
