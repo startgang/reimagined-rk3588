@@ -50,33 +50,49 @@ flowchart TD
 - 4 камеры: 2 × DCPHY (4-lane) + 2 × CSI DPHY (4-lane)
 
 ## Структура репозитория
-```
-reimagined-rk3588/
-├── README.md
-├── docs/
-│   ├── hardware/            # Спецификации по железу, инструкции по сборке
-│   ├── software/            # Руководства по сборке ядра, прошивке
-│   ├── performance/         # Результаты бенчмарков, анализ задержек
-│   └── integration/         # Руководства по интеграции с другими системами
-│
-├── hardware/                # Аппаратная часть
-│   ├── schematics/          # Схемы и блок диаграммы модуля
-│   ├── pcb/                 # Чертежи плат
-│   ├── mechanical/          # 3D-модели, чертежи корпуса (STEP, STL)
-│   ├── adapters/            # Проекты переходников и адаптеров
-│   └── components/          # Даташиты на ключевые компоненты
-│
-├── software/                # Программная часть
-│   ├── kernel/              # Патчи для ядра Linux, драйверы сенсоров
-│   ├── device-tree/         # Device Tree Overlays для RK3588
-│   ├── tuning/              # ISP-профили для конкретных камер (JSON/xml)
-│   ├── examples/            # Примеры кода (C/C++/Python)
-│   └── ai/                  # Примеры моделей и скриптов для NPU (RKNN)
-│
-├── tools/                   # Вспомогательные утилиты и скрипты
-│   └── ...
-│
-└── images/                  # Скетчи, рисунки, фото и т.д.
+```mermaid
+---
+config:
+    treeView:
+        rowIndent: 80
+        lineThickness: 3
+    theme: base
+    themeVariables:
+        treeView:
+            labelFontSize: '20px'
+            labelColor: '#E0E0E0'
+            lineColor: '#757575'
+        background: '#1E1E1E'
+        primaryColor: '#2D2D2D'
+        primaryBorderColor: '#616161'
+        primaryTextColor: '#E0E0E0'
+        lineColor: '#757575'
+        tertiaryColor: '#3D3D3D'
+---
+treeView-beta
+    "reimagined-rk3588/"
+        "README.md"
+        "docs/"
+            "hardware/ - спецификации по железу, инструкции по сборке"
+            "software/ - руководства по сборке ядра, прошивке"
+            "performance/ - результаты бенчмарков, анализ задержек"
+            "integration/ - руководства по интеграции с другими системами"
+        "hardware/"
+            "schematics/ - схемы и блок диаграммы модуля"
+            "pcb/ - чертежи плат"
+            "mechanical/ - 3D-модели, чертежи корпуса (STEP, STL)"
+            "adapters/ - проекты переходников и адаптеров"
+            "components/ - даташиты на ключевые компоненты"
+        "software/"
+            "kernel/ - патчи для ядра Linux, драйверы сенсоров"
+            "device-tree/ - Device Tree Overlays для RK3588"
+            "tuning/ - ISP-профили для конкретных камер (JSON/xml)"
+            "examples/ - примеры кода (C/C++/Python)"
+            "ai/ - примеры моделей и скриптов для NPU (RKNN)"
+        "tools/"
+            "..."
+        "images/"
+            "..."
 ```
 ## Альтернативные интерфейсы и расширение
 В этом разделе приведены варианты подключения камер, несовместимых с MIPI CSI.
